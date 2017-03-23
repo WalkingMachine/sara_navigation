@@ -8,10 +8,6 @@
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
   <maintainer email="me@maximest-pierre.me">maxime st-pierre</maintainer>
-<<<<<<< HEAD
-=======
-
->>>>>>> 0912e5d77072e6e98b46ebcc2025bc0078d397ce
 
   <!-- One license tag required, multiple allowed, one license per tag -->
   <!-- Commonly used license strings: -->
@@ -43,8 +39,8 @@
   <!-- Use test_depend for packages you need only for testing: -->
   <!--   <test_depend>gtest</test_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>navigation</build_depend>
-  <run_depend>navigation</run_depend>
+  <build_depend>move_base</build_depend>
+  <run_depend>move_base</run_depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->
