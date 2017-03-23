@@ -3,7 +3,7 @@ raytrace_range: 5.0
 
 # footprint: [[front left corner], [front right corner],
 #             [rear right corner], [rear left corner]]
-footprint: [[0.40, -0.33], [0.40, 0.33], [-0.40, 0.33], [-0.40, -0.33]]
+footprint: [[0.31, -0.25], [0.31, 0.25], [-0.31, 0.25], [-0.31, -0.25]]
 
 inflation_radius: 0.10
 
