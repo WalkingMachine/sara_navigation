@@ -1,13 +1,17 @@
 <?xml version="1.0"?>
 <package>
-  <name>wm_2dnav</name>
+  <name>sara_navigation</name>
   <version>0.0.0</version>
-  <description>The wm_2dnav package</description>
+  <description>Sara navigation package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag --> 
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
   <maintainer email="me@maximest-pierre.me">maxime st-pierre</maintainer>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0912e5d77072e6e98b46ebcc2025bc0078d397ce
 
   <!-- One license tag required, multiple allowed, one license per tag -->
   <!-- Commonly used license strings: -->
