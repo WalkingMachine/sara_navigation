@@ -1,6 +1,6 @@
 <launch>
 
-    <arg name="map" default="$(find sara_navigation)/maps/robocup_2017/arena.yaml"/>
+    <arg name="map" default="$(find sara_navigation)/maps/block_E.yaml"/>
   <arg name="odom_topic" default="/odom" />
 
   <include file="$(find sara_launch)/launch/amcl/wm_amcl.launch" />
