@@ -7,5 +7,5 @@ inflation_radius: 0.55
 observation_sources: laser_scan_sensor rgbd_camera_sensor
 
 laser_scan_sensor: {sensor_frame: front_hokuyo_link, data_type: LaserScan, topic: /scan, marking: true, clearing: true, expected_update_rate: 32.0, inf_is_valid: false}
-rgbd_camera_sensor: {sensor_frame: base_link, data_type: LaserScan, topic: /scan_from_pointcloud, marking: true, clearing: true, expected_update_rate: 32.0, inf_is_valid: false}
+rgbd_camera_sensor: {sensor_frame: front_hokuyo_link, data_type: LaserScan, topic: /scan_from_pointcloud, marking: true, clearing: true, expected_update_rate: 32.0, inf_is_valid: false}
 
