@@ -1,6 +1,6 @@
 <launch>
 
-    <arg name="map" default="$(find sara_navigation)/maps/walkingxlivia.yaml"/>
+    <arg name="map" default="$(find sara_navigation)/maps/livia.yaml"/>
   <arg name="odom_topic" default="/odom" />
 
   <include file="$(find sara_launch)/launch/amcl/wm_amcl.launch" />
