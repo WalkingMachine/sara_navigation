@@ -1,21 +1,26 @@
 <launch>
 
-    <arg name="map" default="$(find sara_navigation)/maps/walkingxlivia.yaml"/>
+    <arg name="map" default="$(find sara_navigation)/maps/local_de_club.yaml"/>
   <arg name="odom_topic" default="/odom" />
 
   <include file="$(find sara_launch)/launch/amcl/wm_amcl.launch" />
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" clear_params="true" >
-	<param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS" />
+
     <rosparam file="$(find sara_navigation)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
     <rosparam file="$(find sara_navigation)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
     <rosparam file="$(find sara_navigation)/config/local_costmap_params.yaml" command="load" />
     <rosparam file="$(find sara_navigation)/config/global_costmap_params.yaml" command="load" />
-    <rosparam file="$(find sara_navigation)/config/base_local_planner_params.yaml" command="load" />
+
+	<param name="base_local_planner" value="eband_local_planner/EBandPlannerROS" />
+	<param name="base_global_planner" value="navfn/NavfnROS" />
+    <rosparam file="$(find sara_navigation)/config/base_eband_planner_params.yaml" command="load" />
+    <rosparam file="$(find sara_navigation)/config/base_navfn_planner_params.yaml" command="load" />
+
     <remap from="/odom" to="$(arg odom_topic)" />
   </node>
 
  <node name="map_server" pkg="map_server" type="map_server" args=" $(arg map)" required="true" output="screen">
-      <param name="frame_id" value="/map" />
+      <param name="frame_id" value="map" />
   </node>
- 
+
 </launch>
