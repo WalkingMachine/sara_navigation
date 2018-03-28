@@ -1,5 +1,27 @@
 global_costmap:
+  # Coordinate frame and tf parameters
   global_frame: map
+    # The global frame for the costmap to operate in.
   robot_base_frame: base_link
+    # The name of the frame for the base link of the robot.
+  # transform_tolerance: 0.2
+    # Specifies the delay in transform (tf) data that is tolerable in seconds. This parameter serves as a safeguard to losing a link in the tf tree while still allowing an amount of latency the user is comfortable with to exist in the system. For example, a transform being 0.2 seconds out-of-date may be tolerable, but a transform being 8 seconds out of date is not. If the tf transform between the coordinate frames specified by the global_frame and robot_base_frame parameters is transform_tolerance seconds older than ros::Time::now(), then the navigation stack will stop the robot.
+  # Rate parameters
   update_frequency: 2.0
+    # The frequency in Hz for the map to be updated.
+  # publish_frequency: 2.0
+    # The frequency in Hz for the map to be publish display information.
+  # Map management parameters
+  rolling_window: false
   static_map: true
+    # Whether or not to use a rolling window version of the costmap. If the static_map parameter is set to true, this parameter must be set to false.
+  always_send_full_costmap: false
+    # If true the full costmap is published to "~<name>/grid" every update. If false only the part of the costmap that has changed is published on the "~<name>/grid_updates" topic.
+  # width: 2.5
+    # The width of the map in meters.
+  # height: 2.5
+    # The height of the map in meters.
+  # resolution: 0.02
+    # The resolution of the map in meters/cell.
+  # plugins:
+    # Sequence of plugin specifications, one per layer. Each specification is a dictionary with name and type fields. The name is used to define the parameter namespace for the plugin. See the tutorials for examples.
