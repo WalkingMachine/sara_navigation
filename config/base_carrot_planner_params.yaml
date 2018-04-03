@@ -1,5 +1,5 @@
 CarrotPlanner:
-  step_size: 0.05
+  step_size: 0.15
     # The size steps to take backward in meters along the vector between the robot and the user-specified goal point when attempting to find a valid goal for the local planner.
 
   min_dist_from_robot: 0.10

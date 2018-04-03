@@ -3,12 +3,6 @@ recovery_behaviors:
  - {name: rotate_recovery, type: rotate_recovery/RotateRecovery}
  - {name: aggressive_reset, type: clear_costmap_recovery/ClearCostmapRecovery}
 
-base_global_planner: "global_planner/GlobalPlanner"
-  # The name of the plugin for the global planner to use with move_base, see pluginlib documentation for more details on plugins. This plugin must adhere to the nav_core::BaseGlobalPlanner interface specified in the nav_core package. (1.0 series default: "NavfnROS")
-
-base_local_planner: "eband_local_planner/EBandPlannerROS"
-  # The name of the plugin for the local planner to use with move_base see pluginlib documentation for more details on plugins. This plugin must adhere to the nav_core::BaseLocalPlanner interface specified in the nav_core package. (1.0 series default: "TrajectoryPlannerROS")
-
 controller_frequency: 10.0
   # The rate in Hz at which to run the control loop and send velocity commands to the base.
 

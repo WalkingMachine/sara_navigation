@@ -1,10 +1,13 @@
 <launch>
 
     <arg name="map" default="$(find sara_navigation)/maps/local_de_club.yaml"/>
-    <arg name="odom_topic" default="/odom" />
 
     <include file="$(find sara_launch)/launch/amcl/wm_amcl.launch" />
     <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" clear_params="true" >
+
+        <param name="base_global_planner" value="global_planner/GlobalPlanner" />
+        <param name="base_local_planner" value="eband_local_planner/EBandPlannerROS" />
+
         <rosparam file="$(find sara_navigation)/config/move_base_params.yaml" command="load" />
 
         <rosparam file="$(find sara_navigation)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
@@ -15,7 +18,6 @@
         <rosparam file="$(find sara_navigation)/config/base_eband_planner_params.yaml" command="load" />
         <rosparam file="$(find sara_navigation)/config/base_global_planner_params.yaml" command="load" />
 
-        <remap from="/odom" to="$(arg odom_topic)" />
     </node>
 
     <node name="map_server" pkg="map_server" type="map_server" args=" $(arg map)" required="true" output="screen">
