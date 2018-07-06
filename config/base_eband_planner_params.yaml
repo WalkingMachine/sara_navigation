@@ -65,7 +65,7 @@ EBandPlannerROS:  # eband_local_planner/EBandPlannerROS
   in_place_trans_vel: 0.01
       # Minimum in place linear velocity
 
-  k_prop: 5
+  k_prop: 7
       # Proportional gain of the PID controller
 
   k_damp: 2.0
