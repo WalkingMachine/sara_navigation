@@ -1,6 +1,6 @@
 <launch>
 
-    <arg name="map" default="$(find sara_navigation)/maps/local_de_club.yaml"/>
+    <arg name="map" default="$(find sara_navigation)/maps/AreneRobocup2018_V2.yaml"/>
 
     <include file="$(find sara_launch)/launch/amcl/wm_amcl.launch" />
     <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" clear_params="true" >
