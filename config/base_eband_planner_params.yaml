@@ -43,7 +43,7 @@ EBandPlannerROS:  # eband_local_planner/EBandPlannerROS
   eband_significant_force_lower_bound: 0.05
       # Minimum magnitude of force that is considered significant and used in the calculations
 
-  costmap_weight: 50
+  costmap_weight: 30
       # Costmap weight factor used in the calculation of distance to obstacles
 
   # Trajectory Controller Parameters
@@ -65,10 +65,10 @@ EBandPlannerROS:  # eband_local_planner/EBandPlannerROS
   in_place_trans_vel: 0.01
       # Minimum in place linear velocity
 
-  k_prop: 7
+  k_prop: 4
       # Proportional gain of the PID controller
 
-  k_damp: 2.0
+  k_damp: 2.5
       # Damping gain of the PID controller
 
   Ctrl_Rate: 10.0
