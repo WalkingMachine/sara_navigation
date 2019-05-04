@@ -1,0 +1,36 @@
+plugins: 
+    - {name: static_map,       type: "costmap_2d::StaticLayer"}
+    - {name: obstacles1,        type: "costmap_2d::VoxelLayer"}
+    - {name: obstacles2,        type: "costmap_2d::VoxelLayer"}
+publish_frequency: 1.0
+obstacles1:
+    observation_sources: base_scan
+    base_scan:
+        data_type: LaserScan
+        sensor_frame: /front_hokuyo_link
+        clearing: true
+        marking: true
+        topic: /scan
+    cost_scaling_factor: 60
+    inflation_radius: 0.7
+
+obstacles2:
+    observation_sources: base_scan
+    base_scan:
+        data_type: LaserScan
+        sensor_frame: /front_hokuyo_link
+        clearing: true
+        marking: true
+        topic: /scan_from_pointcloud
+    cost_scaling_factor: 60
+    inflation_radius: 0.7
+
+static_map:
+    cost_scaling_factor: 60
+    inflation_radius: 0.7
+
+
+publish_frequency: 1.0
+
+
+footprint: [[-0.325, -0.325], [-0.325, 0.325], [0.325, 0.325], [0.46, 0.0], [0.325, -0.325]]

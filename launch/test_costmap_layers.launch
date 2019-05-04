@@ -1,0 +1,16 @@
+<launch>
+
+    <arg name="map" default="$(find sara_navigation)/maps/local_de_club.yaml"/>
+    <rosparam file="$(find sara_navigation)/config/test.yaml" command="load" ns="/costmap_node/costmap" />
+
+
+    <node name="costmap_node" pkg="costmap_2d" type="costmap_2d_node" required="true" output="screen">
+        <param name="frame_id" value="map" />
+    </node>
+
+
+    <node name="map_server" pkg="map_server" type="map_server" args=" $(arg map)" required="true" output="screen">
+        <param name="frame_id" value="map" />
+    </node>
+
+</launch>
