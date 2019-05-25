@@ -1,8 +1,8 @@
 EBandPlannerROS:  # eband_local_planner/EBandPlannerROS
-  xy_goal_tolerance: 0.05
+  xy_goal_tolerance: 0.01
       # Distance tolerance for reaching the goal pose
 
-  yaw_goal_tolerance: 0.05
+  yaw_goal_tolerance: 0.01
       # Orientation tolerance for reaching the desired goal pose
 
   rot_stopped_vel: 0.01
@@ -47,7 +47,7 @@ EBandPlannerROS:  # eband_local_planner/EBandPlannerROS
       # Costmap weight factor used in the calculation of distance to obstacles
 
   # Trajectory Controller Parameters
-  max_vel_lin: 0.75
+  max_vel_lin: 1.0
       # Maximum linear velocity
 
   max_vel_th: 1

@@ -1,8 +1,16 @@
 <launch>
 
-    <arg name="map" default="$(find sara_navigation)/maps/AreneRobocup2018_V2.yaml"/>
+    <!-- Set the map file -->
+    <arg name="map" default="$(find sara_navigation)/maps/local_de_club.yaml"/>
 
-    <include file="$(find sara_launch)/launch/amcl/wm_amcl.launch" />
+
+    <!-- Load the costmap file -->
+
+    <!-- Load the navigation AMCL audometry -->
+    <include file="$(find sara_navigation)/launch/wm_amcl.launch" />
+
+
+    <!-- Launch move_base -->
     <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" clear_params="true" >
 
         <param name="base_global_planner" value="global_planner/GlobalPlanner" />
@@ -10,10 +18,16 @@
 
         <rosparam file="$(find sara_navigation)/config/move_base_params.yaml" command="load" />
 
-        <rosparam file="$(find sara_navigation)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
-        <rosparam file="$(find sara_navigation)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
-        <rosparam file="$(find sara_navigation)/config/local_costmap_params.yaml" command="load" />
-        <rosparam file="$(find sara_navigation)/config/global_costmap_params.yaml" command="load" />
+
+
+        <rosparam file="$(find sara_navigation)/config/common_costmap_params.yaml" command="load" ns="global_costmap" />
+        <rosparam file="$(find sara_navigation)/config/common_costmap_params.yaml" command="load" ns="local_costmap" />
+
+        <rosparam file="$(find sara_navigation)/config/global_costmap_params.yaml" command="load" ns="global_costmap" />
+        <rosparam file="$(find sara_navigation)/config/local_costmap_params.yaml" command="load" ns="local_costmap" />
+
+
+
 
         <rosparam file="$(find sara_navigation)/config/base_eband_planner_params.yaml" command="load" />
         <rosparam file="$(find sara_navigation)/config/base_global_planner_params.yaml" command="load" />
