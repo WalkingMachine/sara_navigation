@@ -1,7 +1,7 @@
 <launch>
 
     <!-- Set the map file -->
-    <arg name="map" default="$(find sara_navigation)/maps/local_de_club.yaml"/>
+    <arg name="map" default="$(find sara_navigation)/maps/mapPavillonD.yaml"/>
 
 
     <!-- Load the costmap file -->
