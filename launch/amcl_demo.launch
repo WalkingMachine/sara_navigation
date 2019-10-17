@@ -1,13 +1,13 @@
 <launch>
 
   <!-- Run the map server -->
- <arg name="map_file" default="$(find ridgeback_navigation)/maps/map_simulation.yaml"/>
+ <arg name="map_file" default="$(find sara_navigation)/maps/map_simulation.yaml"/>
  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
 
   <!--- Run AMCL -->
- <include file="$(find ridgeback_navigation)/launch/include/amcl.launch" />
+ <include file="$(find sara_navigation)/launch/include/amcl.launch" />
 
   <!--- Run Move Base -->
- <include file="$(find ridgeback_navigation)/launch/include/move_base.launch" />
+ <include file="$(find sara_navigation)/launch/include/move_base.launch" />
 
 </launch>

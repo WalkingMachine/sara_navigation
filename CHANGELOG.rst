@@ -1,5 +1,5 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Changelog for package ridgeback_navigation
+Changelog for package sara_navigation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 0.2.2 (2019-03-25)
@@ -41,8 +41,8 @@ Changelog for package ridgeback_navigation
 
 0.1.3 (2016-03-02)
 ------------------
-* Removed CATKIN_IGNORE from ridgeback_navigation.
-* ridgeback_navigation: remove deprecated footprint layer
+* Removed CATKIN_IGNORE from sara_navigation.
+* sara_navigation: remove deprecated footprint layer
 * Simulation using gazebo_ros_force_based_move.
 * Contributors: Achim Krauch, Mike Purvis, Tony Baltovski
 
@@ -54,5 +54,5 @@ Changelog for package ridgeback_navigation
 
 0.1.0 (2015-11-19)
 ------------------
-* Initial ridgeback release.
+* Initial sara release.
 * Contributors: Mike Purvis, Tony Baltovski

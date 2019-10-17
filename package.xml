@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>ridgeback_navigation</name>
+  <name>sara_navigation</name>
   <version>0.2.2</version>
-  <description>Launch files and code for autonomous navigation of the Ridgeback</description>
+  <description>Launch files and code for autonomous navigation of the sara</description>
   <author email="spourmehr@clearpathrobotics.com">Shokoofeh Pourmehr</author>
   <maintainer email="tbaltovski@clearpathrobotics.com">Tony Baltovski</maintainer>
   <license>BSD</license>
