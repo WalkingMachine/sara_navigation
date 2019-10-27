@@ -28,7 +28,7 @@ obstacles_layer_camera:
       data_type: PointCloud2
       observation_persistence: 0.5
       #sensor_frame: head_xtion_rgb_optical_frame
-      topic: /head_xtion/depth/points
+      topic: /head_xtion/depth_registered/filtered_points
       raytrace_range: 2.0
       obstacle_range: 1.5
       min_obstacle_height: -0.02
@@ -38,4 +38,4 @@ obstacles_layer_camera:
       combination_method: 99
 
 inflater_layer:
- inflation_radius: 0.25
+  inflation_radius: 0.25
